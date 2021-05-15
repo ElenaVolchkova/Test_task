@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Производители</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Кредитная заявка:</th>
+        <th>Товары:</th>
+        <th>Контракт:</th>
+    </tr>
+    {% for manufacturers in manufacturers_list %}
+    <tr>
+        <td>{{ manufacturers.create_credit_date }}</td>
+        <td>{{ manufacturers.products }}</td>
+        <td>{{ manufacturers.contract }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
