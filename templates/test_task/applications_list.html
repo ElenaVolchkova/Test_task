@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Производители</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Дата:</th>
+        <th>Товары:</th>
+        <th>Контракт:</th>
+    </tr>
+    {% for application in applications_list %}
+    <tr>
+        <td>{{ application.create_credit_date }}</td>
+        <td>{{ application.products }}</td>
+        <td>{{ application.contract }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
