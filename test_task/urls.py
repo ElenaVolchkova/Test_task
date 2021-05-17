@@ -7,6 +7,6 @@ from . import views
 app_name = "test_task"
 
 urlpatterns = [
-    path("", views.applications_list, name="applications-list"),
-    path("application/<int:pk>/", views.application_detail, name="application_detail"),
+    path("", views.contracts_list, name="contracts-list"),
+    path("<int:pk>/", views.contract_detail, name="contract-detail"),
 ]

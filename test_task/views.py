@@ -1,16 +1,16 @@
 from django.shortcuts import render
 
 # Create your views here.
-from test_task.models import Product
+from test_task.models import CreditApplication
 
-def applications_list(request):
-    applications = Product.objects.all()
-    context = {"applications": applications}
-    return render(request, "test_task/applications_list.html", context)
+def contracts_list(request):
+    contracts = CreditApplication.objects.all()
+    context = {"contracts": contracts}
+    return render(request, "test_task/contracts_list.html", context)
 
-
-def application_detail(request, id):
-    application = Product.objects.get(pk=id)
-    context = {"application": application}
-    return render(request, "test_task/application_detail.html", context)
+#
+def contract_detail(request, pk):
+    contract = CreditApplication.objects.get(pk=pk)
+    context = {"contract": contract}
+    return render(request, "test_task/contract_detail.html", context)
 
