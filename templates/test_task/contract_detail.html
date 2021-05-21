@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,8 @@
     <title></title>
 </head>
 <body>
-<p>{{ contract.product.manufacturer_id }}</p>
+{% for manufacturer in contract %}
+    <p>{{ manufacturer }}</p>
+{% endfor %}
 </body>
 </html>

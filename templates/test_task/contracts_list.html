@@ -8,16 +8,16 @@
 <table border="1">
     <tr>
         <th>Дата:</th>
-        <th>Товары:</th>
         <th>Контракт:</th>
     </tr>
     {% for contract in contracts %}
-    <tr>
-    <td>{{ contract.create_credit_date }}</td>
-        <td>{{ contract.product.manufacturer_id }}</td>
-        <td><a class="btn btn-info" href="{% url 'test_task:contract-detail' pk=contract.id %}">{{ contract.contract }}</a></td>
-    </tr>
+        <tr>
+            <td>{{ contract.create_credit_date }}</td>
+            <td><a class="btn btn-info"
+                   href="{% url 'test_task:contract-detail' pk=contract.id %}">{{ contract.contract.id }}</a></td>
+        </tr>
     {% endfor %}
+
 </table>
 </body>
 </html>
